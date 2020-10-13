@@ -1,0 +1,14 @@
+{
+  "name": "upload-pictures-on-specific-locations",
+  "version": "1.0.0",
+  "description": "Website Project Uploading Pictures Specific Locations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Hess",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

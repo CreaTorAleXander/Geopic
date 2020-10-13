@@ -1,0 +1,16 @@
+body {
+    background-color: white;
+}
+
+
+h1 {
+    font-size: larger;
+    font-style: italic;
+    color: black;
+}
+
+#mapid { 
+    
+    height: 90vh;
+    width: 100vw ; 
+}
