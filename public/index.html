@@ -12,10 +12,25 @@
     
 </head>
 <body>
+
+ 
+
 <div id="heading"><h1>The Geopic Web Application</h1></div>
 
 <div id="mapid"></div>
+
+
+<form action="/api" method="post" enctype="multipart/form-data">
+    <label>Wählen Sie ein Foto(*.png, .img) von ihrem Rechner aus.
+      <input name="datei" type="file" size="50" accept="image/*"> 
+    </label>  
+    <button id="submit" type="submit">… und ab geht die Post!</button>
+  </form>
+
+
+
 <script>
+
 const mymap = L.map('mapid').setView([49.487457505, 8.466040], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -27,6 +42,28 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiY3JlYXRvcmFsZXhhbmRlciIsImEiOiJja2c2enYyeHIwMmpoMndxb3J2cWVpY2ZyIn0.5UvGE59wznqG3H2XfQv1TA'
 }).addTo(mymap);
 
+
+var marker = {};
+mymap.on('click', function(e){
+    console.log('You clicked at ' + e.latlng.lat + 'and ' + e.latlng.lng)
+    
+    // Clear existing Marker
+    if(marker != undefined){
+        mymap.removeLayer(marker);
+    };
+    
+    
+     marker = new L.marker(e.latlng).addTo(mymap);
+
+
+
+});
+
+function setup(){
+    button.addEventListenener('click', async event =>{
+        
+    })
+}
 </script>
 
 

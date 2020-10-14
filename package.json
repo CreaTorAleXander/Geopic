@@ -9,6 +9,9 @@
   "author": "Alexander Hess",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "busboy": "^0.3.1",
+    "connect-busboy": "0.0.2",
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
   }
 }
